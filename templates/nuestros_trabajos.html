@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    
+
+
+<section id="portafolio" class="portfolio-section vh-100 py-5">
+  <div class="container">
+    <!-- Cards -->
+    <div class="row g-4">
+
+      <!-- Proyecto 1 -->
+      <div class="col-md-4">
+        <article class="portfolio-card h-100">
+          <div class="portfolio-img-wrapper">
+            <img 
+              src="{% static 'images/pla_profesional.webp' %}" 
+              class="portfolio-img"
+              alt="Diseño web para clínica dental"
+              loading="lazy">
+          </div>
+
+          <div class="portfolio-body">
+            <span class="portfolio-category">Clínica Dental</span>
+            <h5 class="portfolio-title">Sitio web profesional para atención odontológica</h5>
+            <p class="portfolio-text">
+              Diseño enfocado en confianza, presentación de servicios, experiencia del paciente
+              y contacto rápido para agendamiento.
+            </p>
+
+            <div class="portfolio-actions d-flex justify-content-between align-items-center gap-2 flex-wrap">
+              <a
+                href="https://devdesignchile.github.io/plan-profesional/"
+                class="btn portfolio-btn"
+                target="_blank"
+                rel="noopener">
+                Ver proyecto
+              </a>
+
+              <a
+                href="https://wa.me/56974661515?text=Hola,%20quiero%20cotizar%20el%20Plan%20Presencia%20B%C3%A1sica"
+                class="btn portfolio-btn"
+                target="_blank"
+                rel="noopener">
+                Cotizar
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+
+      <!-- Proyecto 2 -->
+      <div class="col-md-4">
+        <article class="portfolio-card h-100">
+          <div class="portfolio-img-wrapper">
+            <img 
+              src="{% static 'images/pla_integral.webp' %}" 
+              class="portfolio-img"
+              alt="Diseño web para estética médica"
+              loading="lazy">
+          </div>
+
+          <div class="portfolio-body">
+            <span class="portfolio-category">Estética Médica</span>
+            <h5 class="portfolio-title">Presencia digital elegante para tratamientos estéticos</h5>
+            <p class="portfolio-text">
+              Sitio orientado a transmitir profesionalismo, mostrar tratamientos y convertir
+              visitas en consultas reales.
+            </p>
+
+            <div class="portfolio-actions justify-content-between align-center d-flex gap-2 flex-wrap">
+              <a
+                href="https://devdesignchile.github.io/plan-clinica-integral/"
+                class="btn portfolio-btn"
+                target="_blank"
+                rel="noopener">
+                Ver proyecto
+              </a>
+
+              <a
+                href="https://wa.me/56974661515?text=Hola,%20quiero%20cotizar%20el%20Plan%20Cl%C3%ADnica%20Integral"
+                class="btn portfolio-btn"
+                target="_blank"
+                rel="noopener">
+                Cotizar
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Proyecto 3 -->
+      <div class="col-md-4">
+        <article class="portfolio-card h-100">
+          <div class="portfolio-img-wrapper">
+            <img 
+              src="{% static 'images/plan_avanzado.webp' %}" 
+              class="portfolio-img"
+              alt="Diseño web para centro médico"
+              loading="lazy">
+          </div>
+
+          <div class="portfolio-body">
+            <span class="portfolio-category">Centro Médico</span>
+            <h5 class="portfolio-title">Sitio web institucional para múltiples especialidades</h5>
+            <p class="portfolio-text">
+              Estructura pensada para ordenar servicios, profesionales, especialidades
+              y canales de contacto de forma simple.
+            </p>
+
+            <div class="portfolio-actions justify-content-between align-items-center d-flex gap-2 flex-wrap">
+              <a
+                href="https://devdesignchile.github.io/plan-avanzado/team.html"
+                class="btn portfolio-btn"
+                target="_blank"
+                rel="noopener">
+                Ver proyecto
+              </a>
+
+              <a
+                href="https://wa.me/56974661515?text=Hola,%20quiero%20cotizar%20el%20Plan%20Portal%20M%C3%A9dico"
+                class="btn portfolio-btn"
+                target="_blank"
+                rel="noopener">
+                Cotizar
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <div class="text-center py-2 mt-5">
+      <h2 class="fw-bold sect color-primary mt-2">
+        Diseños web pensados para clínicas y profesionales de la salud
+      </h2>
+    </div>
+  </div>
+</section>
+
+<style>
+.cta-web-section {
+  position: relative;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cta-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
+  transition: transform 0.8s ease;
+}
+
+.cta-web-section:hover .cta-bg-img {
+  transform: scale(1.06);
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(11, 15, 17, 0.88),
+    rgba(43, 50, 41, 0.72),
+    rgba(11, 15, 17, 0.92)
+  );
+  z-index: -1;
+}
+
+.cta-content {
+  max-width: 850px;
+  padding: 4rem 1rem;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(35px);
+  animation: ctaFadeUp 0.9s ease forwards;
+}
+
+.cta-badge {
+  display: inline-block;
+  padding: 0.55rem 1.2rem;
+  margin-bottom: 1.3rem;
+  border-radius: 999px;
+  background: #0D9488;
+  color: #ffffff;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.cta-title {
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+
+.cta-text {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.08rem;
+  max-width: 680px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.7;
+}
+
+
+@keyframes ctaFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-web-section {
+    min-height: 380px;
+    margin-top: 3rem;
+  }
+
+  .cta-content {
+    padding: 3rem 1.2rem;
+  }
+
+  .cta-text {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    width: 80%;
+    max-width: 290px;
+  }
+}
+
+</style>
+<section id="cta-web" class="vh-100 cta-web-section">
+
+  <img 
+    src="{% static 'images/cta_bg.webp' %}" 
+    alt="Fondo diseño web para clínicas"
+    class="cta-bg-img"
+    loading="lazy">
+
+  <div class="cta-overlay"></div>
+
+  <div class="container cta-content text-center">
+    <span class="cta-badge">Impulsa tu presencia digital</span>
+
+    <h2 class="cta-title">
+      Tu clínica también puede verse profesional, confiable y moderna
+    </h2>
+
+    <p class="cta-text">
+      Diseñamos sitios web pensados para atraer pacientes, presentar tus servicios
+      y generar confianza desde el primer clic.
+    </p>
+
+<a 
+  href="https://wa.me/56974661515?text=Hola,%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20cl%C3%ADnica"
+  class="btn btn-cta-primary"
+  target="_blank"
+  rel="noopener">
+  Cotiza tu web
+</a>
+  </div>
+</section>
+
+{% endblock %}

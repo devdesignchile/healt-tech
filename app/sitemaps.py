@@ -11,12 +11,6 @@ class StaticViewSitemap(Sitemap):
             'index',
             'servicios',
             'diseño_web',
-            'seo',
-            'branding',
-            'principiante',
-            'intermedio',
-            'avanzado',
-            'contacto',
             'planes',
             'nosotros',
         ]
