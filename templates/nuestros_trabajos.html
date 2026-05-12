@@ -3,14 +3,81 @@
 {% block content %}
     
 
+<style>
+.portfolio-section {
+  min-height: 100vh;
+}
 
-<section id="portafolio" class="portfolio-section vh-100 py-5">
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.portfolio-actions {
+  margin-top: auto;
+}
+
+.portfolio-img-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .portfolio-section {
+    min-height: auto;
+  }
+
+  .portfolio-img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .portfolio-img {
+    height: 210px;
+  }
+
+  .portfolio-actions {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .portfolio-actions .btn {
+    width: 100%;
+  }
+
+  .sect {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+</style>
+
+<section id="portafolio" class="portfolio-section py-5">
   <div class="container">
     <!-- Cards -->
     <div class="row g-4">
 
       <!-- Proyecto 1 -->
-      <div class="col-md-4">
+      <div class="col-12 col-md-6 col-lg-4 mb-2">
         <article class="portfolio-card h-100">
           <div class="portfolio-img-wrapper">
             <img 
@@ -51,7 +118,7 @@
 
 
       <!-- Proyecto 2 -->
-      <div class="col-md-4">
+      <div class="col-12 col-md-6 col-lg-4  mb-2">
         <article class="portfolio-card h-100">
           <div class="portfolio-img-wrapper">
             <img 
@@ -91,7 +158,7 @@
       </div>
 
       <!-- Proyecto 3 -->
-      <div class="col-md-4">
+      <div class="col-12 col-md-6 col-lg-4  mb-2">
         <article class="portfolio-card h-100">
           <div class="portfolio-img-wrapper">
             <img 
