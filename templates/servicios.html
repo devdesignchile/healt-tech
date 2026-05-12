@@ -1,13 +1,13 @@
- {% extends 'base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block content %}
 
 
-<section class="hero-secondary d-flex justify-content-center mb-5 col-12">
+<section class="hero-secondary d-flex justify-content-center col-12">
   <div class="align-center col-10 pt-5 col-md-9 col-lg-10 mx-auto">
     <div class="row justify-content-center align-items-center min-vh-70 text-center text-lg-start">
-      <div class="col-lg-6 py-5 d-none d-lg-block">
-        <img src="{% static 'images/2.png' %}" alt="Imagen médico" class="img-fluid w-75">
+      <div class="col-lg-6 py-5 d-none d-lg-block" >
+        <img  src="{% static 'images/2.webp' %}" alt="Imagen médico" class="img-fluid w-75">
       </div>
         <div class="col-12 hero-text col-lg-6 d-flex flex-column justify-content-between">
         <h1 class="fw-bold display-5 text-light">
@@ -23,58 +23,193 @@
     </div>
   </div>
 </section>
-<section class="container mb-5">
-  <div class=" mb-5">
-    <h2 class="fw-bold mb-5 section-title">
-      <strong class="color-primary">Servicios</strong>
-    </h2>
-    <p class="text-center lead text-muted mb-5">
-      Escoge que <strong class="color-primary">servicio </strong>necesitas para tu negocio
-    </p>
-  </div>
-  <div class="container-fluid d-flex flex-column flex-md-row justify-content-center align-items-center gap-4 bg-white p-0">
-    <a aria-label="ver planes desarrollo web" href="{% url 'diseño_web' %}" class="nav-link-box text-dark text-center text-decoration-none w-75 w-md-auto">
-      <div class="icon mb-2">
-        <i class="bi bi-display color-primary fs-3"></i>
-      </div>
-      <div><h6>Diseño y Desarrollo Web</h6></div>
-    </a>
-    <a aria-label="ver planes SEO medico" href="{% url 'seo' %}" class="nav-link-box text-dark text-center text-decoration-none w-75 w-md-auto">
-      <div class="icon mb-2">
-        <i class="bi bi-search color-primary fs-3"></i>
-      </div>
-      <div><h6>SEO Médico</h6></div>
-    </a>
-    <a aria-label="ver planes branding medico" href="{% url 'branding' %}" class="nav-link-box text-dark text-center text-decoration-none w-75 w-md-auto">
-      <div class="icon mb-2">
-        <i class="bi bi-brush color-primary fs-3"></i>
-      </div>
-      <div><h6>Branding Médico</h6></div>
-    </a>
-  </div>
-</section>
-<section class="description-section my-5">
+
+<section id="demos" class="py-5 bg-light">
   <div class="container">
-    <div class="row align-items-center ">
-      <div class="col-md-6 justify-mobile ">
-        <h2 class="fw-bold mb-4 ">Impulsa tu presencia profesional en el mundo digital</h2>
-        <p class="lead text-muted  mb-4">
-          En un mercado cada vez más competitivo, una imagen sólida y confiable marca la diferencia.
-          Nuestro equipo combina <strong class="color-primary">estrategia</strong>,<strong class="color-primary">diseño</strong> y <strong class="color-primary">tecnología</strong> para ayudarte a atraer más pacientes,
-          fortalecer tu reputación y consolidar tu práctica médica en el entorno digital.
-        </p>
-        <p class="text-muted">
-          Te acompañamos en cada etapa: desde la creación de tu sitio web, optimización SEO, publicidad estratégica,
-          hasta el posicionamiento de tu marca personal. Cada solución está diseñada específicamente para profesionales de la salud
-          que buscan crecer con excelencia.
-        </p>
+    <div class="text-center mb-4">
+      <h2 class="fw-bold color-primary">Así podría verse tu próxima clínica digital.</h2>
+    </div>
+
+    <div class="row mt-4 g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="ratio ratio-16x9 bg-white rounded-top">
+            <img src="{% static 'images/pla_profesional.webp' %}" class="w-100 h-100 object-fit-cover rounded-top"
+                 alt="Demo Clínica Dental" loading="lazy">
+          </div>
+          <div class="card-body text-center">
+            <h6 class="fw-bold mb-2">Clínica Dental</h6>
+            <a
+              href="https://devdesignchile.github.io/plan-profesional/"
+              class="btn btn-outline-primary px-5 btn-sm" target="_blank" rel="noopener">Ver</a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6 text-center">
-        <img src="{% static 'images/doctores.png' %}" alt="Profesionales de la salud digitales" class="img-fluid">
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="ratio ratio-16x9 bg-white rounded-top">
+            <img src="{% static 'images/pla_integral.webp' %}" class="w-100 h-100 object-fit-cover rounded-top"
+                 alt="Demo Estética Médica" loading="lazy">
+          </div>
+          <div class="card-body text-center">
+            <h6 class="fw-bold mb-2">Estética Médica</h6>
+            <a
+              href="https://devdesignchile.github.io/plan-clinica-integral/"
+              class="btn btn-outline-primary px-5 btn-sm" target="_blank" rel="noopener">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="ratio ratio-16x9 bg-white rounded-top">
+            <img src="{% static 'images/plan_avanzado.webp' %}" class="w-100 h-100 object-fit-cover rounded-top"
+                 alt="Demo Centro Médico" loading="lazy">
+          </div>
+          <div class="card-body text-center">
+            <h6 class="fw-bold mb-2">Centro Médico</h6>
+            <a
+              href="https://devdesignchile.github.io/plan-avanzado/team.html"
+              class="btn btn-outline-primary px-5 btn-sm" target="_blank" rel="noopener">Ver</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<section class="container mb-5">
+  <div class=" mb-5">
+    <h2 class="fw-bold mb-5 section-title">
+      <strong class="color-primary">Por qué elegirnos</strong>
+    </h2>
+  </div>
+      <div class="text-center mb-4">
+        <p class="text-muted mb-0">Tres razones por las que nuestra web funciona para tu consulta</p>
+      </div>
+
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body py-4">
+            <i class="bi bi-graph-up-arrow display-6 mb-2 color-primary"></i>
+            <h5 class="fw-bold">Más pacientes</h5>
+            <p class="small mb-0">Aparece en Google y facilita reservas por WhatsApp en un clic.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body py-4">
+            <i class="bi bi-shield-check display-6 mb-2 color-primary"></i>
+            <h5 class="fw-bold">Profesionalismo</h5>
+            <p class="small mb-0">Diseño confiable y claro para transmitir seguridad desde el primer clic.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body py-4">
+            <i class="bi bi-lightning-charge display-6 mb-2 color-primary"></i>
+            <h5 class="fw-bold">Entrega en 7 días</h5>
+            <p class="small mb-0">Proceso simple, sin dolor de cabeza. Nosotros lo armamos, tú lo apruebas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="h-100 py-5" id="planes-digitales">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold color-primary">Planes de Desarrollo Web</h2>
+      <p class="lead color-primary">Soluciones integrales para clínicas y especialistas que quieren destacarse digitalmente</p>
+    </div>
+    <div class="row g-4">
+      
+      <div class="col-md-6 col-lg-4 d-flex mb-3">
+        <div class="card border-0 rounded-4 p-4 text-white w-100 d-flex flex-column" style="background-color: #1E293B;">
+          <div class="card-body text-center d-flex flex-column justify-content-between">
+            <div>
+            <div class="d-flex justify-content-center mb-3">
+              <div class="bg-white rounded-circle d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+                <i class="bi color-secondary bi-award display-4"></i>
+              </div>
+            </div>
+              <h4 class="fw-bold text-white mb-3">Presencia Básica</h4>
+              <div class="mb-4">
+                <span class="fw-bold text-white"><span class="small">desde</span> $199.990 <span class="small">CLP</span></span>
+              </div>
+            <ul class="list-unstyled text-start text-white mb-4 px-3">
+              <li class="mb-2 text-white"><i class="bi bi-check-circle-fill me-2"></i><strong> Landing Page:</strong> Sitio de una página (Inicio, Servicios, Contacto).</li>
+              <li class="mb-2 text-white"><i class="bi bi-check-circle-fill me-2"></i><strong> Branding Básico:</strong> Aplicación de logotipo y paleta de colores.</li>
+              <li class="mb-2 text-white"><i class="bi bi-check-circle-fill me-2"></i><strong> Conversión:</strong> Botón de WhatsApp y formulario de consultas.</li>
+              <li class="text-white"><i class="bi bi-check-circle-fill me-2"></i><strong> SEO Inicial:</strong> Optimización básica y alta en Google Maps.</li>
+            </ul>
+            </div>
+            <a aria-label="cotizar plan presencia basica" href="https://wa.me/56931009144?text=Hola,%20estoy%20interesado%20en%20el%20plan%20Presencia%20Básica.%20¿Podríamos%20agendar%20una%20videollamada?" class="btn btn-cta-secondary rounded-pill px-4 py-2 fw-bold text-teal-700 mt-auto" target="_blank">Cotizar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 d-flex mb-3">
+        <div class="card border-0 rounded-4 p-4 text-white w-100 d-flex flex-column" style="background-color: #1E293B;">
+          <div class="card-body text-center d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-center mb-3">
+                <div class="bg-white rounded-circle d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+                <i class="bi color-secondary bi-rocket-takeoff display-4"></i>
+                </div>
+              </div>
+              <h4 class="fw-bold text-white mb-3">Clínica Digital</h4>
+                <div class="mb-4">
+                 <span class="fw-bold text-white"><span class="small">desde</span> $449.990 <span class="small">CLP</span></span>
+                </div>
+            <ul class="list-unstyled text-start text-white mb-4 px-3">
+              <li class="mb-2 text-white"><i class="bi bi-check-circle-fill me-2"></i><strong> Web Completa:</strong> Hasta 5 secciones (Nosotros, Especialidades, etc).</li>
+              <li class="mb-2 text-white"><i class="bi bi-check-circle-fill me-2"></i><strong> Automatización:</strong> Sistema de reservas online integrado.</li>
+              <li class="mb-2 text-white"><i class="bi bi-check-circle-fill me-2"></i><strong> SEO Intermedio:</strong> Posicionamiento local y rendimiento optimizado.</li>
+              <li class="text-white"><i class="bi bi-check-circle-fill me-2"></i><strong> RRSS:</strong> Integración directa con tus redes sociales y WhatsApp.</li>
+            </ul>
+            </div>
+            <a aria-label="cotizar plan clinica digital" href="https://wa.me/56931009144?text=Hola,%20me%20interesa%20el%20plan%20Clínica%20Digital.%20¿Me%20pueden%20dar%20más%20detalles?" class="btn btn-cta-secondary rounded-pill px-4 py-2 fw-bold text-teal-700 mt-auto" target="_blank">Cotizar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 d-flex mb-3">
+        <div class="card border-0 rounded-4 p-4 text-white w-100 d-flex flex-column" style="background-color: #1E293B;">
+          <div class="card-body text-center d-flex flex-column justify-content-between">
+            <div>
+            <div class="d-flex justify-content-center mb-3">
+              <div class="bg-white rounded-circle d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+                <i class="bi color-secondary bi-gem display-4"></i>
+              </div>
+            </div>
+              <h4 class="fw-bold text-white mb-3">Portal Premium</h4>
+                <div class="mb-4">
+                <span class="fw-bold text-white"><span class="small">desde</span> $999.990 <span class="small">CLP</span></span>
+                </div>
+            <ul class="list-unstyled text-start text-white mb-4 px-3">
+              <li class="mb-2 text-white"><i class="bi bi-check-circle-fill me-2"></i><strong> Funciones Avanzadas:</strong> Portal de pacientes o videoconsultas.</li>
+              <li class="mb-2 text-white"><i class="bi bi-check-circle-fill me-2"></i><strong> SEO Avanzado:</strong> Creación de blog temático y estrategia semántica.</li>
+              <li class="mb-2 text-white"><i class="bi bi-check-circle-fill me-2"></i><strong> Soporte:</strong> Mantenimiento técnico y reportes de rendimiento.</li>
+              <li class="text-white"><i class="bi bi-check-circle-fill me-2"></i><strong> Todo Incluido:</strong> Todo lo de los planes anteriores potenciado al máximo.</li>
+            </ul>
+            </div>
+            <a aria-label="cotizar plan portal premium" href="https://wa.me/56931009144?text=Hola,%20quiero%20más%20información%20sobre%20el%20plan%20Portal%20Premium%20para%20mi%20centro%20médico." class="btn btn-cta-secondary rounded-pill px-4 py-2 fw-bold text-teal-700 mt-auto" target="_blank">Cotizar</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 <section class="py-5">
   <div class="container">
     <div class="text-center mb-5">
@@ -87,7 +222,7 @@
         <a aria-label="cotizar" href="{% url 'planes' %}" class="btn-section btn-80-mobile mt-3 mx-auto ">Cotizar</a>
       </div>
       <div class="col-lg-6 text-center mt-5">
-        <img src="{% static 'images/cotizar.png' %}" alt="Diseño Web Médico" class="img-fluid w-75 mx-auto">
+        <img src="{% static 'images/cotizar.webp' %}" alt="Diseño Web Médico" class="img-fluid w-75 mx-auto">
       </div>
     </div>
     <div class="row align-items-center mb-5 flex-lg-row-reverse" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
@@ -96,7 +231,7 @@
         <p>En esta sesión analizamos tus necesidades, objetivos y expectativas. Solo después de conocerte te proponemos un plan personalizado. <strong class="color-primary">Sin compromiso ni pago anticipado.</strong></p>
       </div>
       <div class="col-lg-6 text-center">
-        <img src="{% static 'images/Video files-bro.png' %}" alt="Videollamada Diagnóstico" class="img-fluid w-75 mx-auto">
+        <img src="{% static 'images/Video files-bro.webp' %}" alt="Videollamada Diagnóstico" class="img-fluid w-75 mx-auto">
       </div>
     </div>
     <div class="row align-items-center mb-5" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
@@ -105,7 +240,7 @@
         <p>Te enviamos una propuesta clara que incluye diseño, funcionalidades, estrategia de posicionamiento y tiempos. Todo pensado para tu especialidad médica. Posterior al <strong class="text-success">"SI"</strong> de la propuesta, se envia el <strong class="text-dark">contrato</strong> y se firma por ambas partes</p>
       </div>
       <div class="col-lg-6 text-center">
-        <img src="{% static 'images/propuesta.jpg' %}" alt="Propuesta Estratégica" class="img-fluid w-75 mx-auto">
+        <img src="{% static 'images/propuesta.webp' %}" alt="Propuesta Estratégica" class="img-fluid w-75 mx-auto">
       </div>
     </div>
     <div class="row align-items-center mb-5 flex-lg-row-reverse" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
@@ -114,7 +249,7 @@
         <p>Diseñamos tu página web, trabajamos la identidad visual y dejamos todo preparado para lanzar tu presencia digital con impacto profesional.</p>
       </div>
       <div class="col-lg-6 text-center">
-        <img src="{% static 'images/Software integration-bro.png' %}" alt="Branding Médico" class="img-fluid w-75 mx-auto">
+        <img src="{% static 'images/Software integration-bro.webp' %}" alt="Branding Médico" class="img-fluid w-75 mx-auto">
       </div>
     </div>
     <div class="row align-items-center mb-5" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
@@ -123,7 +258,7 @@
         <p>Publicamos tu sitio web y te capacitamos para que puedas administrarlo o responder consultas. También puedes optar por dejarlo en nuestras manos con un plan mensual.</p>
       </div>
       <div class="col-lg-6 text-center">
-        <img src="{% static 'images/Launching-pana.png' %}" alt="Lanzamiento Web Médico" class="img-fluid w-75 mx-auto">
+        <img src="{% static 'images/Launching-pana.webp' %}" alt="Lanzamiento Web Médico" class="img-fluid w-75 mx-auto">
       </div>
     </div>
     <div class="row align-items-center mb-5 flex-lg-row-reverse" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
@@ -132,61 +267,12 @@
         <p>Te acompañamos después del lanzamiento: mejoras continuas, posicionamiento en Google, rediseños si es necesario y análisis de resultados. Tienes 3 meses de garantias para poder mejorar, actualizar o modificar ciertas partes de tu pagina</p>
       </div>
       <div class="col-lg-6 text-center">
-        <img src="{% static 'images/Call center-amico.png' %}" alt="Soporte Continuo" class="img-fluid w-75 mx-auto">
+        <img src="{% static 'images/Call center-amico.webp' %}" alt="Soporte Continuo" class="img-fluid w-75 mx-auto">
       </div>
     </div>
   </div>
 </section>
-  <section class="container recomedaciones mb-5 pb-5">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold mb-5 ">¿No sabes que es lo que necesitas?</h2>
-     <p class="text-center lead text-muted mb-5">Selecciona la opción que más se asemeje a tu situación y descubre cómo podemos ayudarte</p>
-    </div>
-    <div class="row text-center">
-      <div class="col-lg-4 mb-4 d-flex">
-        <div class="p-4 shadow rounded bg-white w-100 d-flex flex-column justify-content-between">
-          <div class="h-100 d-flex flex-column justify-content-between">
-            <div>
-              <i class="bi bi-award display-4" style="color:#2E8B57;"></i>
-              <h4 class="fw-bold mt-3" style="color:#003366;"> <strong>Estoy comenzando, quiero hacerlo bien</strong></h4>
-              <p class="text-muted  mt-4">Aún no tengo sitio web o recién estoy armando mi consulta. Necesito visibilidad y confianza desde el inicio.</p>
-            </div>
-            <div class="mt-3">
-              <a aria-label="quiero montar mi clinica" href="{% url 'principiante' %}" class="btn btn-level-1 w-100">Ver soluciones para empezar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4 d-flex">
-        <div class="p-4 shadow rounded bg-white w-100 d-flex flex-column justify-content-between">
-          <div class="h-100 d-flex flex-column justify-content-between">
-            <div>
-              <i class="bi bi-bar-chart-line display-4" style="color:#003366;"></i>
-              <h4 class="fw-bold mt-3" style="color:#003366;"> <strong>Ya comencé, pero me cuesta crecer</strong></h4>
-              <p class="text-muted mt-4">Tengo redes sociales o página básica, pero no estoy atrayendo pacientes como quisiera.</p>
-            </div>
-            <div class="mt-3">
-              <a aria-label="ya tengo mi clinica" href="{% url 'intermedio' %}" class="btn btn-level-2 w-100">Ver cómo crecer online</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4 d-flex">
-        <div class="p-4 shadow rounded bg-white w-100 d-flex flex-column justify-content-between">
-          <div class="h-100 d-flex flex-column justify-content-between">
-            <div>
-              <i class="bi bi-gem display-4" style="color:#C0A16B;"></i>
-              <h4 class="fw-bold mt-3" style="color:#003366;"><strong>Estoy consolidado, quiero destacar</strong></h4>
-              <p class="text-muted mt-4 ">Ya tengo pacientes y trayectoria, pero necesito una imagen digital que esté a la altura y que automatice procesos.</p>
-            </div>
-            <div class="mt-3">
-              <a aria-label="quiero consolidar mi clinica" href="{% url 'avanzado' %}" class="btn btn-level-3 w-100">Llevar mi marca al siguiente nivel</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 {% endblock %}
 
   

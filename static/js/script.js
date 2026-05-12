@@ -1,1 +1,41 @@
-function cambiarContenido(t){document.getElementById("contenido").textContent=t,document.getElementById("verMasBtn").classList.remove("d-none")}function cambiarContenido(t){let e=document.getElementById("contenido"),n=document.getElementById("verMasBtn");e.innerHTML="";let o=t.split(" ");o.forEach((t,n)=>{let l=document.createElement("span");l.textContent=t,l.classList.add("word"),l.style.animationDelay=`${.1*n}s`,e.appendChild(l),n<o.length-1&&e.appendChild(document.createTextNode(" "))}),n.classList.remove("d-none")}!function(t){"use strict";AOS.init({once:!0}),t(window).on("scroll",function(){let e=t(".scroll-top-to");t(window).scrollTop()>=200?e.fadeIn(200):e.fadeOut(100)}),t(".scroll-top-to").on("click",function(){return t("body,html").animate({scrollTop:0},500),!1})}(jQuery),cambiarContenido("");
+(function ($) {
+  'use strict';
+
+  AOS.init({
+    once: true
+  });
+
+  $(window).on('scroll', function () {
+    let scrollToTop = $('.scroll-top-to'),
+      scroll = $(window).scrollTop();
+    if (scroll >= 200) {
+      scrollToTop.fadeIn(200);
+    } else {
+      scrollToTop.fadeOut(100);
+    }
+  });
+
+  $('.scroll-top-to').on('click', function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 500);
+    return false;
+  });
+
+})(jQuery);
+
+// Función para cambiar el contenido
+function cambiarContenido(texto) {
+  const contenido = document.getElementById('contenido');
+  const verMasBtn = document.getElementById('verMasBtn');
+
+  if (contenido && verMasBtn) {
+    contenido.textContent = texto;
+    verMasBtn.classList.remove('d-none');
+  }
+}
+
+// Esperar a que el DOM esté completamente cargado antes de ejecutar
+document.addEventListener('DOMContentLoaded', function () {
+  cambiarContenido("");
+});

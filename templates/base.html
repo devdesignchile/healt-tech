@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Agencia de Diseño Web Especializada en Salud | HealTech</title>
+  <title>Agencia de Diseño Web Especializada en Salud | pulsodigital</title>
   <meta name="google-site-verification" content="I-Tysf6s5vGi3jfkPocAIVClXcE1AOv_aKGGdv4YVWM" />
   <meta name="description" content="Impulsa tu clínica médica con diseño web, branding profesional y posicionamiento SEO. Trabajamos con especialistas de salud en todo Chile.">
   <meta name="keywords" content="desarrollo web para médicos, branding médico, SEO para clínicas, marketing salud" />
@@ -11,14 +11,14 @@
   <link rel="icon" href="{% static 'images/hta.ico' %}" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:title" content="{% block og_title %}Healt Tech Agency - Soluciones Digitales para Profesionales de la Salud{% endblock %}" />
+  <meta property="og:title" content="{% block og_title %}pulsodigital - Soluciones Digitales para Profesionales de la Salud{% endblock %}" />
   <meta property="og:description" content="Agencia especializada en desarrollo web, branding y SEO para médicos y clínicas." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ request.build_absolute_uri }}" />
-  <meta property="og:image" content="{% static 'images/logoHT.jpg' %}" />
-  <meta property="og:site_name" content="Healt Tech Agency" />
+  <meta property="og:image" content="{% static 'images/logoHT.webp' %}" />
+  <meta property="og:site_name" content="pulsodigital" />
   <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'plugins/aos/aos.css' %}" />
+  <link rel="stylesheet" href="{% static 'plugins/aos/aos.min.css' %}" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="{% static 'css/style.min.css' %}?v=1.3">
@@ -33,7 +33,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "HealTech Agency",
+  "name": "pulsodigital",
   "alternateName": "HTA",
   "url": "https://www.healtech.cl",
   "logo": "https://www.healtech.cl/static/images/logoHT.jpg",
@@ -63,7 +63,7 @@
 
 <nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0">
   <div class="container">
-	<a aria-label="inicio" class="navbar-brand logo" href="{% url 'index' %}"><img src="{% static 'images/logoHT.jpg' %}" alt="logo"></a>
+	<a aria-label="inicio" class="navbar-brand logo" href="{% url 'index' %}"><img src="{% static 'images/logoHT.webp' %}" alt="logo"></a>
     <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span>
@@ -77,28 +77,21 @@
 			<li class="nav-item {% if current_page == 'index' %}active{% endif %}" data-aos="fade-down" data-aos-delay="0">
 			  <a aria-label="inicio" class="nav-link" href="{% url 'index' %}">Inicio</a>
 			</li>
-            <li class="nav-item {% if current_page == 'nosotros' %}active{% endif %}" data-aos="fade-down" data-aos-delay="100">
+      <li class="nav-item {% if current_page == 'nosotros' %}active{% endif %}" data-aos="fade-down" data-aos-delay="100">
 			  <a class="nav-link" aria-label="nosotros" href="{% url 'nosotros' %}">Sobre Nosotros</a>
 			</li>
-            <li class="nav-item dropdown  {% if current_page == 'servicios' %}active{% endif %}" data-aos="fade-down" data-aos-delay="200">
-              <a class="nav-link dropdown-toggle" aria-label="servicios" href="{% url 'servicios' %}" id="navbarDropdownServicios" role="button">
-                Servicios
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownServicios">
-                <a class="dropdown-item" aria-label="desarrollo web" href="{% url 'diseño_web' %}">Desarrollo Web</a>
-                <a class="dropdown-item" aria-label="optimizacion seo" href="{% url 'seo' %}">Optimización SEO</a>
-                <a class="dropdown-item" aria-label="branding medico" href="{% url 'branding' %}">Branding Médico</a>
-              </div>
-            </li>
+      <li class="nav-item dropdown  {% if current_page == 'servicios' %}active{% endif %}" data-aos="fade-down" data-aos-delay="200">
+			  <a class="nav-link" aria-label="servicios" href="{% url 'servicios' %}">Servicios</a>
+			</li>
 			<li class="nav-item {% if current_page == 'planes' %}active{% endif %}" data-aos="fade-down" data-aos-delay="300">
-			  <a class="nav-link" aria-label="planes" href="{% url 'planes' %}">Planes</a>
+			  <a class="nav-link" href="{% url 'planes' %}">Nuestros Trabajos</a>
 			</li>
 	  </ul>
     <div>
     <ul class="navbar-nav mx-auto">
        <li class="nav-item {% if current_page == 'contacto' %}active{% endif %}" data-aos="fade-down" data-aos-delay="400">
          <div class="d-lg-block d-flex justify-content-center w-100 mt-3 mt-lg-0">
-         <a target="_blank" href="https://wa.me/56931009144?text=Hola,%20quiero%20potenciar%20mi%20consulta%20médica%20con%20su%20ayuda,%20quiero%20agendar%20una%20reunión" aria-label="Contacto" class="btn-cta-primary btn-contact-menu" >CONTACTO</a>
+         <a target="_blank" href="https://wa.me/56931009144?text=Hola,%20quiero%20potenciar%20mi%20consulta%20médica%20con%20su%20ayuda,%20quiero%20agendar%20una%20reunión" class="btn-cta-primary btn-contact-menu" >CONTACTO</a>
          </div>
        </li>
     </ul>
@@ -166,6 +159,6 @@
   <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
   <script src="{% static 'plugins/aos/aos.js' %}"></script>
-  <script src="{% static 'js/script.min.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
